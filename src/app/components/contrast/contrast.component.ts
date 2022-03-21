@@ -11,7 +11,5 @@ export class ContrastComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  switchATUser(){
-
-  }
+  
 }
