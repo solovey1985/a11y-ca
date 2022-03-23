@@ -6,10 +6,11 @@ import { KeyboardComponent } from './components/keyboard/keyboard.component';
 const routes: Routes = [
   { path: 'keyboard', component: KeyboardComponent },
   { path: 'contrast', component: ContrastComponent },
+  { path: 'contrast/:id', component: ContrastComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
