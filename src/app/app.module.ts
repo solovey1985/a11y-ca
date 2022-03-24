@@ -9,6 +9,7 @@ import { ContrastComponent } from './components/contrast/contrast.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContentComponent } from './components/content/content.component';
 import { PageComponent } from './components/page/page.component';
+import { TocComponent } from './components/toc/toc.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PageComponent } from './components/page/page.component';
     HeaderComponent,
     ContentComponent,
     PageComponent,
+    TocComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
