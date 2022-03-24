@@ -2,8 +2,7 @@
   <h2>Navigation Fix</h2>
   <div class="main-container">
     <ul>
-      <app-toc ></app-toc>
-      
+      <li *ngFor="let m of tocs"><app-toc [model]="m"></app-toc></li>
     </ul>
 
     <article>

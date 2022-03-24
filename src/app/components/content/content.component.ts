@@ -8,14 +8,17 @@ import { TocModel } from '../../../../models/toc-model';
 })
 export class ContentComponent implements OnInit {
   constructor() {}
-  tocs = TocModel[3];
-  ngOnInit() {}
+  tocs: TocModel[];
+  ngOnInit() {
+    this.tocs = new Array<TocModel>();
+    this.initTocs();
+  }
 
   initTocs() {
     for (let i = 1; i < 4; i++) {
-      let model = new TocModel();
+      const model = new TocModel();
       model.DisplayLabel = 'Page ' + i;
-      model.Link = '../page/' + i;
+      model.Link = '/content/page/' + i;
       this.tocs.push(model);
     }
   }
