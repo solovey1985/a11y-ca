@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { KeyboardComponent } from './components/keyboard/keyboard.component';
 import { ContrastComponent } from './components/contrast/contrast.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ContentComponent } from './components/content/content.component';
+import { PageComponent } from './components/page/page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { HeaderComponent } from './components/header/header.component';
     KeyboardComponent,
     ContrastComponent,
     HeaderComponent,
+    ContentComponent,
+    PageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
