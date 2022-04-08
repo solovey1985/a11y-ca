@@ -16,6 +16,6 @@ export class TocComponent implements OnInit {
   ngOnInit() {}
 
   onClick() {
-    this.router.navigateByUrl(this.model.Link);
+    this.router.navigateByUrl(this.model.Link, { skipLocationChange: true, } );
   }
 }

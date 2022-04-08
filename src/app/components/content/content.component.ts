@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TocModel } from '../../../../models/toc-model';
 
 @Component({
@@ -9,10 +9,12 @@ import { TocModel } from '../../../../models/toc-model';
 export class ContentComponent implements OnInit {
   constructor() {}
   tocs: TocModel[];
+
   ngOnInit() {
     this.tocs = new Array<TocModel>();
     this.initTocs();
   }
+
 
   initTocs() {
     for (let i = 1; i < 4; i++) {
