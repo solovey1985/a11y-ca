@@ -6,29 +6,29 @@ import { filter } from 'rxjs/operators';
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css'],
 })
-export class PageComponent implements OnInit {
-
-  @ViewChild('firstInput') firstInput: ElementRef;
+export class PageComponent {
 
   param: number;
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private route: ActivatedRoute, private router: Router, private element: ElementRef) {
     this.route.params.subscribe((params) => {
-      console.log(params);
       if (params['id']) {
         this.param = params['id'];
       }
     });
-
-  }
-
-  ngOnInit() {
   }
 
   ngAfterViewInit() {
+    this.focusOnFirstElement()
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
-      console.log("Hello ", this.firstInput.nativeElement);
-      this.firstInput.nativeElement.focus();
+      this.focusOnFirstElement();
     });
   }
 
+  private focusOnFirstElement() {
+    const input = this.element.nativeElement.querySelector('input');
+    console.log(input);
+    if (input) {
+      input.focus();
+    }
+  }
 }
