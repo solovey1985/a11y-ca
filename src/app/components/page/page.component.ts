@@ -25,10 +25,10 @@ export class PageComponent {
   }
 
   private focusOnFirstElement() {
-    const input = this.element.nativeElement.querySelector('input');
-    console.log(input);
-    if (input) {
-      input.focus();
+    const firstElement = this.element.nativeElement.querySelectorAll("a,input"); //TODO: find a way to identify first focusable element
+    console.log(firstElement);
+    if (firstElement.length) {
+      firstElement[0].focus();
     }
   }
 }
