@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { TocModel } from '../../../../models/toc-model';
+import { TocModel } from 'src/app/models/toc-model';
 
 @Component({
   selector: 'app-content',

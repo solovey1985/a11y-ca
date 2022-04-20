@@ -22,7 +22,23 @@
       class="btn btn-success btn-md"
       (click)="switchATUser()"
     >
-      <i class="bi bi-eye-slash"></i>
+      <i *ngIf="isAtUser" class="bi bi-eye-slash"></i>
+      <i *ngIf="!isAtUser" class="bi bi-eye"></i>
     </button>
+    <div class="ms-1 btn-group"><button
+      type="button"
+      class="btn btn-success btn-md"
+      (click)="switchATUser()"
+    >
+      <i class="bi bi-plus"></i>
+    </button> 
+    <button
+    type="button"
+    class="btn btn-success btn-md"
+    (click)="switchATUser()"
+  >
+    <i class="bi bi-dash"></i>
+  </button></div>
+    
   </div>
 </nav>

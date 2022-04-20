@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TocModel } from '../../../../models/toc-model';
+import { TocModel } from 'src/app/models/toc-model';
+
 
 @Component({
   selector: 'app-toc',

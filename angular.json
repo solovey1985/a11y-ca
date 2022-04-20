@@ -28,11 +28,11 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/style-a11y.css"
             ],
             "styles": [
               "src/styles.less",
-              "src/styles-a11y.less"
+              "src/style-a11y.less"
             ],
             "scripts": []
           },
@@ -61,7 +61,7 @@
             "development": {
               "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
+              "vendorChunk": false,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true

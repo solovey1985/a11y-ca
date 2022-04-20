@@ -6,14 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.less'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  isAtUser = false;
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
   switchATUser() {
-    const link = document.createElement("link");
-    link.setAttribute("rel","stylesheet");
-    link.setAttribute("id", "atUser");
-    link.setAttribute("href","styles-a11y.css")
-    document.head.appendChild(link);
+    this.isAtUser = !this.isAtUser;
+    const st= document.head.querySelector("#atUser");
+    if (st) { 
+        console.log(st)
+        st.remove();
+    } else {
+      const link = document.createElement("link");
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("id", "atUser");
+      link.setAttribute("type", "text/css");
+      link.setAttribute("href", "assets/style-a11y.css")
+      document.head.appendChild(link);
+    }
   }
 }
