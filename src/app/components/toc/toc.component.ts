@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TocModel } from 'src/app/models/toc-model';
-
+import { TocModel } from '../../models/toc-model';
 
 @Component({
   selector: 'app-toc',
@@ -17,6 +16,6 @@ export class TocComponent implements OnInit {
   ngOnInit() {}
 
   onClick() {
-    this.router.navigateByUrl(this.model.Link, { skipLocationChange: true, } );
+    this.router.navigateByUrl(this.model.Link, { skipLocationChange: true });
   }
 }

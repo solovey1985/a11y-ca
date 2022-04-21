@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { TocModel } from 'src/app/models/toc-model';
+import { TocModel } from '../../models/toc-model';
 
 @Component({
   selector: 'app-content',
@@ -14,7 +14,6 @@ export class ContentComponent implements OnInit {
     this.tocs = new Array<TocModel>();
     this.initTocs();
   }
-
 
   initTocs() {
     for (let i = 1; i < 4; i++) {
