@@ -25,4 +25,27 @@ export class HeaderComponent implements OnInit {
       document.head.appendChild(link);
     }
   }
+  increaseFontSize(){
+    var headers = document.querySelectorAll("h3,h1,h2,p,a");
+    for(let i=0; i<headers.length; i++){
+
+        let el = headers[i] as HTMLElement;
+        let style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+        let font = parseFloat(style);
+        
+        el.style.fontSize = (font + 1) + 'px';
+    }
+
+  }
+  decreaseFontSize(){
+    var headers = document.querySelectorAll("h3,h1,h2,p,a");
+    for(let i=0; i<headers.length; i++){
+
+        let el = headers[i] as HTMLElement;
+        let style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+        let font = parseFloat(style);
+        
+        el.style.fontSize = (font - 1) + 'px';
+    }
+  }
 }
